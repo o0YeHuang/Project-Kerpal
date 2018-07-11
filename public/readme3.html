@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>README</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Lato');
+      * {box-sizing: border-box; font-family: 'Lato', sans-serif;}
+      html, body {width: 100%; height: 100%; padding: 0;}
+      body {display: flex; flex-direction: column; padding: 0 2em;}
+      h1 {text-align: center;}
+      table, td, th {border: 1px solid #ddd; text-align: left;}
+      table {border-collapse: collapse;}
+      .fileSizes {width: 50%}
+      .loadSpeeds {width: 75%}
+      th, td {padding: 15px;}
+      p {padding: 0 2em;}
+    </style>
+  </head>
+  <body>
+    <h1>Team Kerpal - Homework 3 README</h1>
+    <br />
+    <h2>File Sizes</h2>
+    <table class="fileSizes">
+      <tr>
+        <th>Filename</th>
+        <th>Size (bytes)</th>
+        <th>JS Coverage %</th>
+      </tr>
+      <tr>
+        <td>index.js (vanilla)</td>
+        <td>8,191</td>
+        <td>39.6% Unused (3436 Unused Bytes)</td>
+      </tr>
+      <tr>
+        <td>index-vue.js (Vue.js - Kerpal Code)</td>
+        <td>7,185</td>
+        <td>50.4% Unused (3,622 Unused Bytes)</td>
+      </tr>
+      <tr>
+        <td>vue.min.js (Vue.js Framework)</td>
+        <td>81,626</td>
+        <td>91.5% Unused (74,682 Unused Bytes)</td>
+      </tr>
+      <tr>
+        <td>axios.min.js (Fetch Framework used with Vue.js)</td>
+        <td>12,670</td>
+        <td>55.9% Unused (7,080 Unused Bytes)</td>
+      </tr>
+      <tr>
+        <td>raven.min.js (Error Tracking - Both Versions)</td>
+        <td>25,168</td>
+        <td>65.7% Unused (16,528 Unused Bytes)</td>
+      </tr>
+    </table>
+    <br />
+    <p>When looking at file sizes alone, the Vanilla JS version is much, much better
+      than the Vue.js version of our site. Both versions use Sentry/Raven.js for
+      error tracking, so nothing can be improved upon there since their required libraries
+      are linked. The Vanilla JS versions only further requires "index.js", summing to a total
+      of 33,159 bytes of JS required (index.js and raven.min.js). The Vue.js version required considerablbly
+      more javascript code since it needs "index.vue.js" (our implementation of the site using Vue.js), "vue.min.js"
+      (Vue.js library), "axios.min.js" (Fetch library used instead of XMLHttpRequest), and also "raven.min.js".
+      This totals to 126,649 bytes of JS required for the Vue.js version. This is almost four times the amount of JS required
+      for the vanilla version which definitely causes increased page load times.
+    </p>
+    <h2>Page Load Speeds</h2>
+    <table class="loadSpeeds">
+      <tr>
+        <th>Test Name</th>
+        <th># of Requests</th>
+        <th>Transfer Size</th>
+        <th>Run 1 (ms)</th>
+        <th>Run 2 (ms)</th>
+        <th>Run 3 (ms)</th>
+        <th>Average (ms)</th>
+      </tr>
+      <tr>
+        <td>Vanilla JS - PC Unthrottled</td>
+        <td>69</td>
+        <td>2.6 MB</td>
+        <td>183</td>
+        <td>206</td>
+        <td>207</td>
+        <td>198.7</td>
+      </tr>
+      <tr>
+        <td>Vue.js - PC Unthrottled</td>
+        <td>70</td>
+        <td>2.6 MB</td>
+        <td>568</td>
+        <td>602</td>
+        <td>567</td>
+        <td>579</td>
+      </tr>
+      <tr>
+        <td>Vanilla JS - Android 3G Throttled (Regular 3G)</td>
+        <td>82</td>
+        <td>4.5 MB</td>
+        <td>1160</td>
+        <td>1350</td>
+        <td>1420</td>
+        <td>1310</td>
+      </tr>
+      <tr>
+        <td>Vue.js - Android 3G Throttled (Regular 3G)</td>
+        <td>69</td>
+        <td>3.8 MB</td>
+        <td>1390</td>
+        <td>1590</td>
+        <td>1490</td>
+        <td>1490</td>
+      </tr>
+    </table>
+    <h5>*Note: "Regular 3G" corresponds to 100ms latency with 750 kb/s download and 250 kb/s upload.</h5>
+    <br />
+    <p>
+      On a mobile device, the Vue.js version was not that much slower than the Vanilla JS versions, equating to about a 12% slow down. On the PC, the Vanilla JS
+      versions was much faster than the Vue.js version, being about 66% faster. This is interesting to note for the mobile devices because Vue.js is definitely making more requests
+      for JS (as noted previously), but there was not much of a an overall slowdown on a throttled 3G connection. It seems to us that the asynchronicity of the JS code for both versions
+      is more apparent on the mobile device tests throttled at 3G speeds. On a PC with an unthrottled connection is where we see the difference between the Vanilla JS and Vue.js versions.
+    </p>
+    <br />
+    <h2>Developer Experience</h2>
+    <p>
+        Developing for the Vanilla JS version was a much better experience for the Kerpal team. We found it easy to
+        find documentation for any implementation questions that we faced. This was NOT the case for our Vue.js version.
+        Vue.js has a bit of a learning curve and we believe their documentation is lacking in certain areas. We struggled with
+        figuring out how to bind component props to actual html elements themselves, only to realize it was a minor syntax issue
+        that was not apparent in the Vue.js docs. Furthermore, both the implementations we wrote for the Vanilla JS and Vue.js versions
+        were nearly the same line count, there was no added developer experience here by using Vue.js. On the contrary, we felt that by using
+        Vue.js, the developer experience for us went way down due to lack of solid documentation and examples regarding more complex components, binding
+        props to them, and dynamically or iteratively adding these Vue.js templated components. 
+    </p>
+    <br />
+    <h2>Screenshots</h2>
+    <a href="assets/imgs/vanillaJS-PageLoad-PC.png">Screenshot of Vanilla JS Page Load - PC Unthrottled</a>
+    <a href="assets/imgs/vueJS-PageLoad-PC.png">Screenshot of Vue.js Page Load - PC Unthrottled</a>
+    <a href="assets/imgs/vanillaJS-PageLoad-Android.png">Screenshot of Vanilla JS Page Load - Android 3G</a>
+    <a href="assets/imgs/vueJS-PageLoad-Android.png">Screenshot of Vue.js Page Load - Android 3G</a>
+    <a href="assets/imgs/SentryJS-ErrorTracking.png">Screenshot of Sentry.js Error Tracking (Dashboard)</a>
+    <a href="assets/imgs/Sentry-Issue-Detail1.png">Screenshot of Sentry.js Issue Detail - 1</a>
+    <a href="assets/imgs/Sentry-Issue-Detail2.png">Screenshot of Sentry.js Issue Detail - 2</a>
+  </body>
+</html>

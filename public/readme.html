@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>README</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Lato');
+      * {box-sizing: border-box; font-family: 'Lato', sans-serif;}
+      html, body {width: 100%; height: 100%; padding: 0;}
+      body {display: flex; flex-direction: column; padding: 0 2em;}
+      h1 {text-align: center;}
+      table, td, th {border: 1px solid #ddd; text-align: left;}
+      table {border-collapse: collapse;}
+      .fileSizes {width: 50%}
+      .loadSpeeds {width: 75%}
+      th, td {padding: 15px;}
+      p {padding: 0 2em;}
+    </style>
+  </head>
+  <body>
+    <h1>Team Kerpal - Homework 2 Part 2 Test Results</h1>
+    <br />
+    <h2>File Sizes</h2>
+    <table class="fileSizes">
+      <tr>
+        <th>Filename</th>
+        <th>Size (bytes)</th>
+        <th>CSS Coverage %</th>
+      </tr>
+      <tr>
+        <td>sounboard-bootstrap.html</td>
+        <td>9312</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>sounboard-vanilla.html</td>
+        <td>8393</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>bootstrap.css</td>
+        <td>145896</td>
+        <td>96.3% Unused (140496 Bytes not used)</td>
+      </tr>
+      <tr>
+        <td>style.css (vanilla)</td>
+        <td>5096</td>
+        <td>37.5% Unused (1910 Bytes not used)</td>
+      </tr>
+    </table>
+    <br />
+    <p>From the file sizes we can see that bootstrap.css is quite large. At 145,896 bytes, bootstrap.css
+      is almost 29 times larger than style.css, which was the style sheet used for our vanilla soundboard.
+      Also we can see that the Bootstrap version has very poor coverage compared to the vanilla version, specifically looking
+      at the amount of unused bytes. The majority of unused bytes from the vanilla versions is from white space, whereas the
+      majority of unused bytes for the Bootstrap version is actually unused CSS.
+    </p>
+    <h2>Page Load Speeds</h2>
+    <table class="loadSpeeds">
+      <tr>
+        <th>Test Name</th>
+        <th># of Requests</th>
+        <th>Transfer Size</th>
+        <th>Run 1 (ms)</th>
+        <th>Run 2 (ms)</th>
+        <th>Run 3 (ms)</th>
+        <th>Average (ms)</th>
+      </tr>
+      <tr>
+        <td>Bootstrap - PC Un-throttled</td>
+        <td>15</td>
+        <td>125 kb</td>
+        <td>283</td>
+        <td>386</td>
+        <td>269</td>
+        <td>312.7</td>
+      </tr>
+      <tr>
+        <td>Vanilla - PC Un-throttled</td>
+        <td>13</td>
+        <td>86.4 kb</td>
+        <td>169</td>
+        <td>164</td>
+        <td>160</td>
+        <td>164.3</td>
+      </tr>
+      <tr>
+        <td>Bootstrap - Android 3G Throttled (Regular 3G)</td>
+        <td>15</td>
+        <td>125 kb</td>
+        <td>3860</td>
+        <td>3400</td>
+        <td>1920</td>
+        <td>3060</td>
+      </tr>
+      <tr>
+        <td>Vanilla - Android 3G Throttled (Regular 3G)</td>
+        <td>14</td>
+        <td>99.9 kb</td>
+        <td>1630</td>
+        <td>1580</td>
+        <td>1560</td>
+        <td>1590</td>
+      </tr>
+    </table>
+    <h5>*Note: "Regular 3G" corresponds to 100ms latency with 750 kb/s download and 250 kb/s upload.</h5>
+    <br />
+    <p>
+      We can clearly observe that there is a significant difference on mobile devices with regards to
+      loading the bootstrap versus vanilla soundboard versions. On average, the bootstrap version loaded in
+      about 3 seconds, whereas the vanilla version loaded in about 1.6 seconds. The bootstrap version is loading much
+      more data due to increased bootstrap.css file size and also loading some glyphs from a font file.
+    </p>
+    <br />
+    <h2>Screenshots</h2>
+    <a href="assets/imgs/Bootstrap-Coverage.png">Screenshot of Bootstrap CSS Coverage</a>
+    <a href="assets/imgs/Vanilla-Coverage.png">Screenshot of Vanilla CSS Coverage</a>
+    <a href="assets/imgs/Bootstrap-Android.png">Screenshot of Bootstrap Android Test</a>
+    <a href="assets/imgs/Vanilla-Android.png">Screenshot of Vanilla Android Test</a>
+    <a href="assets/imgs/Boostrap-HTML-Validation.png">Screenshot of Bootstrap HTML Validation</a>
+    <a href="assets/imgs/Vanilla-HTML-Validation.png">Screenshot of Vanilla HTML Validation</a>
+    <a href="assets/imgs/Bootstrap-CSS-Validation.png">Screenshot of Boostrap CSS Validation</a>
+    <a href="assets/imgs/Vanilla-CSS-Validation.png">Screenshot of Vanilla CSS Validation</a>
+  </body>
+</html>

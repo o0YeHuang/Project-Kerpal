@@ -1,0 +1,272 @@
+@font-face {font-family: Lato; src:  url('../fonts/Lato.woff2');}
+@font-face {
+  font-family: Simplifica;
+  src:  url('../fonts/Simplifica.eot'), url('../fonts/Simplifica.woff') format('woff'), url('../fonts/Simplifica.tff') format('truetype');
+}
+* {box-sizing: border-box;}
+html, body {width: 100%; height: 100%; margin: 0; padding: 0;}
+body {
+  display: flex;
+  flex-direction: column;
+  background: #AAFFA9;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #11FFBD, #AAFFA9) fixed;  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #11FFBD, #AAFFA9) fixed; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+body > * {flex: 1;}
+h1, h2, h3, p, .link > a, ul, li {
+  font-family: 'Lato', sans-serif;
+  color: black;
+}
+header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 8em;
+  z-index: 99;
+  background: #AAFFA9;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #11FFBD, #AAFFA9) fixed;  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #11FFBD, #AAFFA9) fixed; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-box-shadow: 0 0.1em 0.5em black;
+  -moz-box-shadow: 0 0.1em 0.5em black;
+  box-shadow: 0 0.1em 0.5em black;
+}
+.coolSoundEq {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: relative;
+	height: 100%;
+	width: 40%;
+  margin-bottom: 2.5em;
+  padding-right: 2em;
+}
+.coolSoundEq > div {
+	display: inline-block;
+	background: black;
+	height: 1em;
+	width: 2em;
+  margin: 0 0.1em;
+	-webkit-animation: load 3s ease-in-out infinite;
+	animation: load 3s ease-in-out infinite;
+}
+.coolSoundEq .rec1 {
+	-webkit-animation-delay: 0.6s;
+	animation-delay: 0.6s;
+}
+.coolSoundEq .rec2 {
+	-webkit-animation-delay: 0.1s;
+	animation-delay: 0.1s;
+}
+.coolSoundEq .rec3 {
+	-webkit-animation-delay: 0.7s;
+	animation-delay: 0.7s;
+}
+.coolSoundEq .rec4 {
+	-webkit-animation-delay: 0.4s;
+	animation-delay: 0.4s;
+}
+.coolSoundEq .rec5 {
+	-webkit-animation-delay: 1s;
+	animation-delay: 1s;
+}
+@-moz-keyframes load {
+  0%, 100% {
+		-moz-transform-origin: 500% 100%;
+	}
+	16.67% {
+		-moz-transform: scaleY(5);
+	}
+	33.33% {
+		-moz-transform: scaleY(3);
+	}
+	50% {
+		-moz-transform: scaleY(5);
+	}
+	66.67% {
+		-moz-transform: scaleY(1);
+	}
+	83.34% {
+		-moz-transform: scaleY(4);
+	}
+}
+@-webkit-keyframes load {
+  0%, 100% {
+    -webkit-transform-origin: 500% 100%;
+  }
+  16.67% {
+    -webkit-transform: scaleY(5);
+  }
+  33.33% {
+    -webkit-transform: scaleY(3);
+  }
+  50% {
+    -webkit-transform: scaleY(5);
+  }
+  66.67% {
+    -webkit-transform: scaleY(1);
+  }
+  83.34% {
+    -webkit-transform: scaleY(4);
+  }
+}
+@keyframes load {
+	0%, 100% {
+		transform-origin: 500% 100%;
+	}
+	16.67% {
+		transform: scaleY(5);
+	}
+	33.33% {
+		transform: scaleY(3);
+	}
+	50% {
+		transform: scaleY(5);
+	}
+	66.67% {
+		transform: scaleY(1);
+	}
+	83.34% {
+		transform: scaleY(4);
+	}
+}
+#headerTitle, .legal > h3 {
+  font-family: 'Simplifica', sans-serif;
+  color: black;
+  letter-spacing: 0.1em;
+}
+#headerTitle {
+  width: 20%;
+  font-size: 2em;
+  text-align: center;
+}
+header > div:last-of-type {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 40%;
+  height: 4em;
+  padding-right: 2em;
+}
+#loginLink {
+  font-family: 'Lato', sans-serif;
+  color: black;
+  text-decoration: none;
+}
+main {padding-top: 8em;}
+.classContent {
+  width: 100%;
+  padding-left: 18%;
+}
+main > h2, .classContent > h2 {font-size: 2.5em; color: black;}
+.classContent > h2 {margin-bottom: 1em;}
+main > h2 {margin-bottom: 0.5em; padding-left: 18%;}
+.teamContent{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.teamMember {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+.memberProfile {
+  display: flex;
+  flex-direction: column;
+}
+.memberImage {
+  filter: gray;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  width: 600px;
+  height: 600px;
+}
+.memberImage:hover {-webkit-filter: grayscale(0); filter: none;}
+.memberAbout {
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  width: 600px;
+  background-color: transparent;
+  border: 0.1em solid black;
+}
+.memberInfo {
+  padding: 1em 1.5em 0 1.5em;
+}
+.memberInfo > h3, p {
+  font-weight: 300;
+}
+.memberInfo > h2 {
+  font-size: 2em;
+  font-style: italic;
+}
+.memberInfo > h3, p {
+  font-size: 1.2em;
+}
+.memberLinks {
+  align-self: flex-end;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+.link > a {
+  font-size: 2.5em;
+  text-decoration: none;
+}
+.linkImage {
+  width: auto;
+  max-height: 75px;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 4em;
+}
+.legal > h3 {text-align: center}
+@media only screen and (min-width: 1681px) {
+  #headerTitle {font-size: 6em;}
+  .teamMember:nth-of-type(even) > .memberProfile {order: 2;}
+}
+@media only screen and (min-width: 1201px) and (max-width: 1680px) {
+  #headerTitle {font-size: 3.5em;}
+  .teamMember:nth-of-type(even) > .memberProfile {order: 2;}
+}
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+  #headerTitle {font-size: 2.5em;}
+  .coolSoundEq > div {width: 1.5em; height: 0.75em;}
+  .teamMember{justify-content: space-around; margin: 1.3em 0; padding: 0 1.3em;}
+  .memberInfo {padding: 0.25em 0.35em 0 0.35em;}
+  .memberInfo > h2 {font-size: 1em; font-style: italic;}
+  .memberInfo > h3, p {font-size: 0.7em;}
+  .link > a {font-size: 1em;}
+  .linkImage {width: auto; max-height: 50px;}
+  .memberProfile {padding-right: 1em;}
+  .memberAbout {height: 250px; width: 80%; padding-left: 1em; border: none;}
+  .memberImage {height: 250px; width: 250px; border-radius: 50%;}
+  .memberLinks {margin-top: 1.5em;}
+}
+@media only screen and (max-width: 799px) {
+  #headerTitle {font-size: 2.5em;}
+  .coolSoundEq > div {width: 1.5em; height: 0.75em;}
+  .teamMember{justify-content: space-around; margin: 3em 0; padding: 0 1.3em;}
+  .memberInfo {padding: 0.25em 0.35em 0 0.35em;}
+  .memberInfo > h2 {font-size: 1em; font-style: italic;}
+  .memberInfo > h3, p {font-size: 0.7em;}
+  .link > a {font-size: 1em;}
+  .linkImage {width: auto; max-height: 50px;}
+  .memberProfile {padding-right: 1em;}
+  .memberAbout {height: 250px; width: 80%; padding-left: 1em; border: none;}
+  .memberImage {height: 250px; width: 250px; border-radius: 50%;}
+  .memberLinks {margin-top: 1.5em;}
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!--
+Validation Errors:
+
+Validator Output: Document checking completed. No errors or warnings to show.
+
+The structural version passes validation since we are adhereing to HTML5 standards now. Compared to
+the presentational version, this version removes the deprecated attributes that were used to "style"
+the page using only HTML.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Kerpal Soundboard</title>
+    <!-- Latest compiled and minified BootStrap CSS -->
+    <link rel="stylesheet" href="assets/css/view.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css" type="text/css">
+</head>
+
+<body>
+    <header>
+        <br />
+          <div class="row">
+              <div class="col-md-2 col-sm-2 col-xs-12"></div>
+
+              <div class="col-md-2 col-sm-2 col-xs-12">
+                  <img src="assets/imgs/logo.png" alt="Kerpal" class="img-responsive center-block"/>
+              </div>
+
+              <div class="col-md-4 col-sm-4 col-xs-12">
+                  <h1 id="headerTitle" class="text-center text-success">KERPAL</h1>
+              </div>
+              <div class= "col-md-4 col-sm-4 col-xs-12">
+                  <div class="row">&nbsp;</div>
+                  <div class="row">&nbsp;</div>
+                  <div class="row">&nbsp;</div>
+                  <div class="row">
+                    <p class="text-center"><button class="btn btn-outline-secondary btn-lg">LOGIN/SIGN-UP</button></p>
+                  </div>
+              </div>
+          </div>
+    </header>
+
+    <main>
+      <!-- Audios list -->
+      <audio id="demo1" src="assets/sounds/Charlie_1.mp3"></audio>
+      <audio id="demo2" src="assets/sounds/Charlie_2.mp3"></audio>
+      <audio id="demo3" src="assets/sounds/Dave_1.mp3"></audio>
+      <audio id="demo4" src="assets/sounds/Dave_2.mp3"></audio>
+      <audio id="demo5" src="assets/sounds/DeNiro_1.mp3"></audio>
+      <audio id="demo6" src="assets/sounds/DwightSchrute_1.mp3"></audio>
+      <audio id="demo7" src="assets/sounds/JoePesci_1.mp3"></audio>
+      <audio id="demo8" src="assets/sounds/JoePesci_2.mp3"></audio>
+      <audio id="demo9" src="assets/sounds/MrRogers_1.mp3"></audio>
+      <audio id="demo10" src="assets/sounds/Samuel_1.mp3"></audio>
+      <audio id="demo11" src="assets/sounds/Samuel_2.mp3"></audio>
+      <audio id="demo12" src="assets/sounds/WillFerrell_1.mp3"></audio>
+
+      <!-- Buttons and Images -->
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <img src="assets/imgs/CharlieKelly.jpg" alt="Charlie Kelly" class="img-responsive center-block img-rounded" />
+                <button onclick="document.getElementById('demo1').play()" type="button" name="soundBtn_play" class="glyphicon glyphicon-play"></button>
+                <button onclick="document.getElementById('demo1').pause()" type="button" name="soundBtn_pause" class="glyphicon glyphicon-pause"></button>
+                <br />
+            </div>
+
+            <div class="col-md-4 text-center">
+                <img src="assets/imgs/CharlieKelly.jpg" alt="Charlie Kelly" class="img-responsive center-block img-rounded" />
+                <div>
+                  <button onclick="document.getElementById('demo2').play()" type="button" name="soundBtn_play" class="glyphicon glyphicon-play"></button>
+                  <button onclick="document.getElementById('demo2').pause()" type="button" name="soundBtn_pause" class="glyphicon glyphicon-pause"></button>                </div>
+                <br />
+            </div>
+
+            <div class="col-md-4 text-center">
+                <img src="assets/imgs/DaveChappelle.jpeg" alt="Dave Chappelle" class="img-responsive center-block img-rounded" />
+                <div>
+                  <button onclick="document.getElementById('demo3').play()" type="button" name="soundBtn_play" class="glyphicon glyphicon-play"></button>
+                  <button onclick="document.getElementById('demo3').pause()" type="button" name="soundBtn_pause" class="glyphicon glyphicon-pause"></button>                </div>
+                <br />
+            </div>
+
+            <div class="col-md-4 text-center">
+                <img src="assets/imgs/DaveChappelle.jpeg" alt="Dave Chappelle" class="img-responsive center-block img-rounded" />
+                <button onclick="document.getElementById('demo4').play()" type="button" name="soundBtn_play" class="glyphicon glyphicon-play"></button>
+                <button onclick="document.getElementById('demo4').pause()" type="button" name="soundBtn_pause" class="glyphicon glyphicon-pause"></button>                <br />
+            </div>
+
+            <div class="col-md-4 text-center">
+                <img src="assets/imgs/DeNiro.jpg" alt="DeNiro" class="img-responsive center-block img-rounded" />
+                <div>
+                  <button onclick="document.getElementById('demo5').play()" type="button" name="soundBtn_play" class="glyphicon glyphicon-play"></button>
+                  <button onclick="document.getElementById('demo5').pause()" type="button" name="soundBtn_pause" class="glyphicon glyphicon-pause"></button>                </div>
+                <br />
+            </div>
+
+            <div class="col-md-4 text-center">
+                <img src="assets/imgs/DwightSchrute.jpg" alt="Dwight Schrute" class="img-responsive center-block img-rounded" />
+                <div>
+                  <button onclick="document.getElementById('demo6').play()" type="button" name="soundBtn_play" class="glyphicon glyphicon-play"></button>
+                  <button onclick="document.getElementById('demo6').pause()" type="button" name="soundBtn_pause" class="glyphicon glyphicon-pause"></button>                </div> <br />
+            </div>
+
+            <div class="col-md-4 text-center">
+                <img src="assets/imgs/JoePesci.jpg" alt="Joe Pesci" class="img-responsive center-block img-rounded" />
+                <div>
+                  <button onclick="document.getElementById('demo7').play()" type="button" name="soundBtn_play" class="glyphicon glyphicon-play"></button>
+                  <button onclick="document.getElementById('demo7').pause()" type="button" name="soundBtn_pause" class="glyphicon glyphicon-pause"></button>                </div> <br />
+            </div>
+
+            <div class="col-md-4 text-center">
+                <img src="assets/imgs/JoePesci.jpg" alt="Joe Pesci" class="img-responsive center-block img-rounded" />
+                <div>
+                  <button onclick="document.getElementById('demo8').play()" type="button" name="soundBtn_play" class="glyphicon glyphicon-play"></button>
+                  <button onclick="document.getElementById('demo8').pause()" type="button" name="soundBtn_pause" class="glyphicon glyphicon-pause"></button>                </div> <br />
+            </div>
+
+            <div class="col-md-4 text-center">
+                <img src="assets/imgs/MrRogers.jpg" alt="Mr. Rogers" class="img-responsive center-block img-rounded" />
+                <div>
+                  <button onclick="document.getElementById('demo9').play()" type="button" name="soundBtn_play" class="glyphicon glyphicon-play"></button>
+                  <button onclick="document.getElementById('demo9').pause()" type="button" name="soundBtn_pause" class="glyphicon glyphicon-pause"></button>                </div> <br />
+            </div>
+
+            <div class="col-md-4 text-center">
+                <img src="assets/imgs/SamuelJackson.jpg" alt="Samuel L. Jackson" class="img-responsive center-block img-rounded" />
+                <div>
+                  <button onclick="document.getElementById('demo10').play()" type="button" name="soundBtn_play" class="glyphicon glyphicon-play"></button>
+                  <button onclick="document.getElementById('demo10').pause()" type="button" name="soundBtn_pause" class="glyphicon glyphicon-pause"></button>                </div> <br />
+            </div>
+
+            <div class="col-md-4 text-center">
+                <img src="assets/imgs/SamuelJackson.jpg" alt="Samuel L. Jackson" class="img-responsive center-block img-rounded" />
+                <div>
+                  <button onclick="document.getElementById('demo11').play()" type="button" name="soundBtn_play" class="glyphicon glyphicon-play"></button>
+                  <button onclick="document.getElementById('demo11').pause()" type="button" name="soundBtn_pause" class="glyphicon glyphicon-pause"></button>                </div> <br />
+            </div>
+
+            <div class="col-md-4 text-center">
+                <img src="assets/imgs/WillFerrell.jpg" alt="Will Ferrell" class="img-responsive center-block img-rounded" />
+                <div>
+                  <button onclick="document.getElementById('demo12').play()" type="button" name="soundBtn_play" class="glyphicon glyphicon-play"></button>
+                  <button onclick="document.getElementById('demo12').pause()" type="button" name="soundBtn_pause" class="glyphicon glyphicon-pause"></button>                </div> <br />
+            </div>
+
+        </div>
+    </main>
+    <footer>
+        <div class="legal">
+            <h3 class="text-center">&copy; Copyright 2017. Team Kerpal - CSE134B Summer 2017 - UCSD</h3>
+        </div>
+    </footer>
+</body>
+
+</html>

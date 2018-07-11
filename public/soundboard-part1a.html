@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<!--
+Validation Errors:
+
+All the validation errors we received are related to certain attributes being deprecated
+for certain elements when using HTML5. These would not be errors when using HTML4. Also we only
+received one error where the element itself was completely obsolete for HTML5 (font element).
+
+For example the width and align attributes are completely deprecated for h1, h3 hr (only width),
+table, col, and td for HTML5. HTML5 instead relies on CSS for implementing these presentational
+features. These attributes are valid for HTML4, but not for HTML5. Similiarly, the font element is
+valid for HTML4 but not valid for HTML5 since any text styling is done through some form of CSS.
+
+1. The bgcolor attribute on the body element is obsolete. Use CSS instead.
+2. The align attribute on the h1 element is obsolete. Use CSS instead.
+3. The font element is obsolete. Use CSS instead.
+4. The width attribute on the hr element is obsolete. Use CSS instead.
+5. The align attribute on the table element is obsolete. Use CSS instead.
+6. The cellpadding attribute on the table element is obsolete. Use CSS instead.
+7. The align attribute on the col element is obsolete. Use CSS instead.
+8. The valign attribute on the col element is obsolete. Use CSS instead.
+9. The width attribute on the col element is obsolete. Use CSS instead.
+10. The align attribute on the td element is obsolete. Use CSS instead.
+11. The valign attribute on the td element is obsolete. Use CSS instead.
+12. The align attribute on the h3 element is obsolete. Use CSS instead.
+13. The font element is obsolete. Use CSS instead.
+-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Kerpal Soundboard</title>
+  </head>
+  <body>
+    <header>
+      <h1 align="center">
+        <img class="logoImage" src="assets/imgs/logo.png" alt="Kerpal" />
+        <font color="#36b56b">Kerpal Soundboard - Presentation</font>
+        <button>Login</button>
+      </h1>
+    </header>
+    <main>
+      <table align="center" cellpadding=10>
+        <colgroup>
+          <col align="center" valign="middle" width="25%" span=4>
+        </colgroup>
+        <tr>
+          <td align="center" valign="middle">
+            <div>
+              <img src="assets/imgs/CharlieKelly.jpg" alt="Charlie Kelly"/>
+            </div>
+            <div>
+              <audio controls src="assets/sounds/Charlie_1.mp3"></audio>
+            </div>
+            <div>
+              <button type="button" name="soundBtn_1">Play Me</button>
+            </div>
+          </td>
+          <td align="center" valign="middle">
+            <div>
+              <img src="assets/imgs/CharlieKelly.jpg" alt="Charlie Kelly"/>
+            </div>
+            <div>
+              <audio controls src="assets/sounds/Charlie_2.mp3"></audio>
+            </div>
+            <div>
+              <button type="button" name="soundBtn_2">Play Me</button>
+            </div>
+          </td>
+          <td align="center" valign="middle">
+            <div>
+              <img src="assets/imgs/DaveChappelle.jpeg" alt="Dave Chappelle"/>
+            </div>
+            <div>
+              <audio controls src="assets/sounds/Dave_1.mp3"></audio>
+            </div>
+            <div>
+              <button type="button" name="soundBtn_3">Play Me</button>
+            </div>
+          </td>
+          <td align="center" valign="middle">
+            <div>
+              <img src="assets/imgs/DaveChappelle.jpeg" alt="Dave Chappelle"/>
+            </div>
+            <div>
+              <audio controls src="assets/sounds/Dave_2.mp3"></audio>
+            </div>
+            <div>
+              <button type="button" name="soundBtn_4">Play Me</button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" valign="middle">
+            <div>
+              <img src="assets/imgs/DeNiro.jpg" alt="DeNiro"/>
+            </div>
+            <div>
+              <audio controls src="assets/sounds/DeNiro_1.mp3"></audio>
+            </div>
+            <div>
+              <button type="button" name="soundBtn_5">Play Me</button>
+            </div>
+          </td>
+          <td align="center" valign="middle">
+            <div>
+              <img src="assets/imgs/DwightSchrute.jpg" alt="Dwight Schrute"/>
+            </div>
+            <div>
+              <audio controls src="assets/sounds/DwightSchrute_1.mp3"></audio>
+            </div>
+            <div>
+              <button type="button" name="soundBtn_6">Play Me</button>
+            </div>
+          </td>
+          <td align="center" valign="middle">
+            <div>
+              <img src="assets/imgs/JoePesci.jpg" alt="Joe Pesci"/>
+            </div>
+            <div>
+              <audio controls src="assets/sounds/JoePesci_1.mp3"></audio>
+            </div>
+            <div>
+              <button type="button" name="soundBtn_7">Play Me</button>
+            </div>
+          </td>
+          <td align="center" valign="middle">
+            <div>
+              <img src="assets/imgs/JoePesci.jpg" alt="Joe Pesci"/>
+            </div>
+            <div>
+              <audio controls src="assets/sounds/JoePesci_2.mp3"></audio>
+            </div>
+            <div>
+              <button type="button" name="soundBtn_8">Play Me</button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" valign="middle">
+            <div>
+              <img src="assets/imgs/MrRogers.jpg" alt="Mr. Rogers"/>
+            </div>
+            <div>
+              <audio controls src="assets/sounds/MrRogers_1.mp3" ></audio>
+            </div>
+            <div>
+              <button type="button" name="soundBtn_9">Play Me</button>
+            </div>
+          </td>
+          <td align="center" valign="middle">
+            <div>
+              <img src="assets/imgs/SamuelJackson.jpg" alt="Samuel L. Jackson"/>
+            </div>
+            <div>
+              <audio controls src="assets/sounds/Samuel_1.mp3"></audio>
+            </div>
+            <div>
+              <button type="button" name="soundBtn_10">Play Me</button>
+            </div>
+          </td>
+          <td align="center" valign="middle">
+            <div>
+              <img src="assets/imgs/SamuelJackson.jpg" alt="Samuel L. Jackson"/>
+            </div>
+            <div>
+              <audio controls src="assets/sounds/Samuel_2.mp3"></audio>
+            </div>
+            <div>
+              <button type="button" name="soundBtn_11">Play Me</button>
+            </div>
+          </td>
+          <td align="center" valign="middle">
+            <div>
+              <img src="assets/imgs/WillFerrell.jpg" alt="Will Ferrell"/>
+            </div>
+            <div>
+              <audio controls src="assets/sounds/WillFerrell_1.mp3"></audio>
+            </div>
+            <div>
+              <button type="button" name="soundBtn_12">Play Me</button>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </main>
+    <footer>
+      <h3 align="center">
+        <font color="#36b56b">&copy; Copyright 2017. Team Kerpal - CSE134B Summer 2017 - UCSD</font>
+      </h3>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+[
+  {
+    "imgSrc": "/assets/imgs/CharlieKelly.jpg",
+    "soundSrc": "/assets/sounds/Charlie_1.mp3",
+    "imgAlt": "Charlie Kelly",
+    "title": "Charlie - Rock, Flag, & Eagle"
+  },
+  {
+    "imgSrc": "/assets/imgs/CharlieKelly.jpg",
+    "soundSrc": "/assets/sounds/Charlie_2.mp3",
+    "imgAlt": "Charlie Kelly",
+    "title": "Charlie - Lawerly Hearsay"
+  },
+  {
+    "imgSrc": "/assets/imgs/DaveChappelle.jpeg",
+    "soundSrc": "/assets/sounds/Dave_1.mp3",
+    "imgAlt": "Dave Chappelle",
+    "title": "Dave Chappelle - I'm Rick James"
+  },
+  {
+    "imgSrc": "/assets/imgs/DaveChappelle.jpeg",
+    "soundSrc": "/assets/sounds/Dave_2.mp3",
+    "imgAlt": "Dave Chappelle",
+    "title": "Dave Chappelle - I'm rich..."
+  },
+  {
+    "imgSrc": "/assets/imgs/DeNiro.jpg",
+    "soundSrc": "/assets/sounds/DeNiro_1.mp3",
+    "imgAlt": "DeNiro",
+    "title": "DeNiro - You talkin' to me?"
+  },
+  {
+    "imgSrc": "/assets/imgs/DwightSchrute.jpg",
+    "soundSrc": "/assets/sounds/DwightSchrute_1.mp3",
+    "imgAlt": "Dwight Schrute",
+    "title": "Dwight Schrute - Go to..."
+  },
+  {
+    "imgSrc": "/assets/imgs/JoePesci.jpg",
+    "soundSrc": "/assets/sounds/JoePesci_1.mp3",
+    "imgAlt": "Joe Pesci",
+    "title": "Joe Pesci - Have my money?"
+  },
+  {
+    "imgSrc": "/assets/imgs/JoePesci.jpg",
+    "soundSrc": "/assets/sounds/JoePesci_2.mp3",
+    "imgAlt": "Joe Pesci",
+    "title": "Joe Pesci - Warned"
+  },
+  {
+    "imgSrc": "/assets/imgs/MrRogers.jpg",
+    "soundSrc": "/assets/sounds/MrRogers_1.mp3",
+    "imgAlt": "Mr. Rogers",
+    "title": "Mr. Rogers- You know who I am?"
+  },
+  {
+    "imgSrc": "/assets/imgs/SamuelJackson.jpg",
+    "soundSrc": "/assets/sounds/Samuel_1.mp3",
+    "imgAlt": "Samuel L. Jackson",
+    "title": "Samuel L. - Say what again!"
+  },
+  {
+    "imgSrc": "/assets/imgs/SamuelJackson.jpg",
+    "soundSrc": "/assets/sounds/Samuel_2.mp3",
+    "imgAlt": "Samuel L. Jackson",
+    "title": "Samuel L. - I don't remember asking..."
+  },
+  {
+    "imgSrc": "/assets/imgs/WillFerrell.jpg",
+    "soundSrc": "/assets/sounds/WillFerrell_1.mp3",
+    "imgAlt": "Will Ferrell",
+    "title": "Ron Burgundy - I am very important"
+  }
+]

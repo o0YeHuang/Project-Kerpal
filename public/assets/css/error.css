@@ -1,0 +1,141 @@
+/*
+Passes CSS Validation, ignoring the warnings that the vendor prefixes for keyframes
+(@-moz-keyframes and @-webkit-keyframes) are not implemented.
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@font-face {
+  font-family: Simplifica;
+  src:  url('../fonts/Simplifica.eot'), url('../fonts/Simplifica.woff') format('woff'), url('../fonts/Simplifica.tff') format('truetype');
+}
+* {box-sizing: border-box;}
+html, body {width: 100%; height: 100%; margin: 0; padding: 0;}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #AAFFA9;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #11FFBD, #AAFFA9) fixed;  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #11FFBD, #AAFFA9) fixed; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+/*body > * {flex: 1;}*/
+h2, h3 {font-family: "Lato", sans-serif; margin: 0}
+header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 8em;
+  z-index: 99;
+  background: #AAFFA9;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #11FFBD, #AAFFA9) fixed;  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #11FFBD, #AAFFA9) fixed; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-box-shadow: 0 0.1em 0.5em black;
+  -moz-box-shadow: 0 0.1em 0.5em black;
+  box-shadow: 0 0.1em 0.5em black;
+}
+.coolSoundEq {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: relative;
+	height: 100%;
+  margin-bottom: 2.5em;
+  padding-right: 2em;
+}
+.coolSoundEq > div {
+	display: inline-block;
+	background: black;
+	height: 1em;
+	width: 2em;
+  margin: 0 0.1em;
+	-webkit-animation: load 3s ease-in-out infinite;
+	animation: load 3s ease-in-out infinite;
+}
+.coolSoundEq .rec1 {-webkit-animation-delay: 0.6s; animation-delay: 0.6s;}
+.coolSoundEq .rec2 {-webkit-animation-delay: 0.1s; animation-delay: 0.1s;}
+.coolSoundEq .rec3 {-webkit-animation-delay: 0.7s; animation-delay: 0.7s;}
+.coolSoundEq .rec4 {-webkit-animation-delay: 0.4s; animation-delay: 0.4s;}
+.coolSoundEq .rec5 {-webkit-animation-delay: 1s; animation-delay: 1s;}
+@-moz-keyframes load {
+  0%, 100% {-moz-transform-origin: 500% 100%;}
+	16.67% {-moz-transform: scaleY(5);}
+	33.33% {-moz-transform: scaleY(3);}
+	50% {-moz-transform: scaleY(5);}
+	66.67% {-moz-transform: scaleY(1);}
+	83.34% {-moz-transform: scaleY(4);}
+}
+@-webkit-keyframes load {
+  0%, 100% {-webkit-transform-origin: 500% 100%;}
+  16.67% {-webkit-transform: scaleY(5);}
+  33.33% {-webkit-transform: scaleY(3);}
+  50% {-webkit-transform: scaleY(5);}
+  66.67% {-webkit-transform: scaleY(1);}
+  83.34% {-webkit-transform: scaleY(4);}
+}
+@keyframes load {
+	0%, 100% {transform-origin: 500% 100%;}
+	16.67% {transform: scaleY(5);}
+	33.33% {transform: scaleY(3);}
+	50% {transform: scaleY(5);}
+	66.67% {transform: scaleY(1);}
+	83.34% {transform: scaleY(4);}
+}
+#headerTitle, .legal > h3, main h1, main h2, main h3 {
+  font-family: 'Simplifica', sans-serif;
+  color: black;
+  letter-spacing: 0.1em;
+}
+#headerTitle {
+  font-size: 2em;
+  text-align: center;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 8em;
+  width: 100%;
+  height: 100%;
+}
+main > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 8em;
+  padding-left: 2em;
+  width: 50%;
+  height: 100%;
+}
+main > div > * {text-align: center}
+main h1 {font-size: 10em; margin: 0;}
+main h2 {font-size: 6em; margin: 0;}
+main h3 {font-size: 4em; margin: 1em 0 0 0;}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 4em;
+}
+.legal > h3 {text-align: center}
+@media only screen and (min-width: 1681px) {
+  #headerTitle {font-size: 6em;}
+}
+@media only screen and (min-width: 1201px) and (max-width: 1680px) {
+  #headerTitle {font-size: 3.5em;}
+}
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+  #headerTitle {font-size: 2.5em;}
+  .coolSoundEq > div {width: 1.5em; height: 0.75em;}
+  .playpauseButtonImg {visibility: visible;}
+}
+@media only screen and (max-width: 799px) {
+  #headerTitle {font-size: 2.5em;}
+  .coolSoundEq > div {width: 1.5em; height: 0.75em;}
+}

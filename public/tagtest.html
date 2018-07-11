@@ -1,0 +1,196 @@
+<!doctype html>
+<!--
+Validation Errors:
+
+Validator Output: Only recevied 2 warnings (which were identical). The warning states that "the date
+input type is not supported in all browsers. Please be sure to test, and consider using a polyfill."
+
+This warning is received for an input element that has the value of "date" for its "type" attribute.
+
+Not all browsers support an input of type date, and they default them to type text. This would
+cause the breakdown of such browsers using this method to implement something like a datepicker.
+-->
+<html>
+  <head>
+    <title>HTML TagTest</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i" rel="stylesheet">
+    <style type=text/css>
+      body {border: 3px solid red;}
+      h1, h2, h3, h4, a, li, dt, dd, input {font-family: 'Source Sans Pro', sans-serif;}
+      h1, h2, h3 {text-align: center}
+      header > h3 {color: green}
+      header > h2 {color: green}
+      h1, h2, h3 {font-style: italic; color: red;}
+      header {margin: 1em 0; border: 1px solid green;}
+      nav { display: flex; justify-content: center;}
+      nav > a {margin: 1em 1em;}
+      main {display: flex; flex-direction: column; align-items: center; border: 1px solid orange;}
+      main > h2 {color: orange}
+      main > h3 {color: orange}
+      section > h3 {color: orange}
+      footer {margin: 1em 0; border: 1px solid purple}
+      footer > h2 {color: purple}
+    </style>
+  <body>
+    <h1>body</h1>
+    <header>
+      <h2>header</h2>
+      <h3>nav</h3>
+      <nav>
+        <a href="">Home</a>
+        <a href="">Products</a>
+        <a href="">About Us</a>
+        <a href="">Contact</a>
+      </nav>
+    </header>
+    <main>
+      <h2>main</h2>
+      <h3>section (test elements seperated by containing them in sections)</h3>
+      <section>
+        <h3>script</h3>
+        <script>
+          document.write("Hello, World!!! (from script element containing document.write())")
+        </script>
+        <br/>
+      </section>
+      <section>
+        <h3>noscript (maybe invisible)</h3>
+        <noscript>
+          If this message shows up, it means your browser does not support JavaScript
+        </noscript>
+      </section>
+      <section>
+        <h3>object (inserting html code from another file)</h3>
+        <object data="HelloWorld.html" type=text/plain>
+          <param name="HelloWorld" value="true">
+        </object>
+      </section>
+      <section>
+        <h3>form with fieldset</h3>
+        <form>
+          <fieldset>
+            <legend>18 or older?</legend>
+            FullName: <input type="text"><br/>
+            Email: <input type="text"><br/>
+            DOB: <input type="date"><br />
+            <button type="submit" value="Submit">submit</button>
+          </fieldset>
+        </form>
+        <br />
+      </section>
+      <section>
+        <h3>form with inputs</h3>
+        <form action="/API/register">
+          First Name: <input type="text" name="firstname">
+          Last Name: <input type="text" name="lastname"> <br/>
+          Password: <input type="password" name="Password"><br/>
+          Checkbox: <input type="checkbox" name="checkbox"><br/>
+          Radio: <input type="radio" name="radio"><br/>
+          Date: <input type="date" name="date"><br/>
+          ID: <input type="number" name="number">
+        </form>
+        <br />
+      </section>
+      <section>
+        <h3>select with optgroup and options</h3>
+        <select>
+          <optgroup label="Option Group 1">
+            <option value="SubOption1a">Sub-Option 1a</option>
+            <option value="SubOption2a">Sub-Option 2a</option>
+          </optgroup>
+          <optgroup label="Option Group 2">
+            <option value="SubOption1b">Sub-Option 1b</option>
+            <option value="SubOption2b">Sub-Option 2b</option>
+          </optgroup>
+        </select>
+        <br/>
+      </section>
+      <section>
+        <h3>textarea</h3>
+        <textarea rows="6" cols="50">
+        Enter your response here...
+        </textarea>
+        <br />
+      </section>
+      <section>
+        <h3>form with buttons (and some inputs)</h3>
+        <form action="/API/login">
+          First Name: <input type="text" name="firstname">
+          Last Name: <input type="text" name="lastname">
+          <input type="button" name="inputBtn" value="other">
+          <button type="submit" value="Submit">submit</button>
+          <button type="reset" value="Reset">reset</button>
+        </form>
+      </section>
+      <section>
+        <h3>a</h3>
+        <a href="https://www.reddit.com/r/nba/"> reddit nba </a>
+        <br />
+      </section>
+      <section>
+        <h3>ins & del</h3>
+        <p>I love <del>Carlifornia</del> <del>Califarnia</del> <ins>California!</ins></p>
+      </section>
+      <section>
+        <h3>unordered list</h3>
+        <ul>
+          <li>Hello,</li>
+          <li>It's</li>
+          <li>Me</li>
+        </ul>
+      </section>
+      <section>
+        <h3>ordered list</h3>
+        <ol>
+          <li>Hello,</li>
+          <li>It's</li>
+          <li>Me</li>
+        </ol>
+      </section>
+      <section>
+        <h3>dl with dt & dd</h3>
+        <dl>
+          <dt>Beverage</dt>
+          <dd>Coke Pepsi Gatorade</dd>
+        </dl>
+      </section>
+      <section>
+        <h3>iframe</h3>
+        <iframe src="https://www.ucsd.edu" height="400" width="500"></iframe><br/>
+      </section>
+      <section>
+        <h3>img (with different image MIME types)</h3>
+        <h4>gif</h4>
+        <img src="assets/imgs/cat.gif" alt="cat" height="300" width="300"> <br/>
+        <h4>png</h4>
+        <img src="assets/imgs/break.png" alt="break" height="300" width="300"> <br/>
+        <h4>jpg</h4>
+        <img src="assets/imgs/view.jpg" alt="view" height="300" width="300"> <br/>
+        <h4>webp</h4>
+        <img src="assets/imgs/view.webp" alt="beautiful scene" height="300" width="300"><br/>
+        <h4>svg</h4>
+        <img src="assets/imgs/svg.svg" alt="svg file" height="300" width="300"> <br/>
+      </section>
+      <section>
+        <h3>picture (containing source element with srcset attribute and backup img element)</h3>
+        <picture>
+          <source media="(min-width: 650px)" srcset="assets/imgs/view.jpg">
+          <source media="(min-width: 465px)" srcset="assets/imgs/view1.jpg">
+          <img src="assets/imgs/scene.jpg" alt="scene" style="width:auto;">
+        </picture>
+        <picture>
+          <source media="(min-width: 650px)" srcset="assets/imgs/cat.gif">
+          <source media="(min-width: 465px)" srcset="assets/imgs/dog.gif">
+          <img src="assets/imgs/cat.gif" alt="dog" style="width:auto;">
+        </picture>
+      </section>
+      <h2>end of main</h2>
+    </main>
+    <footer>
+      <h2>footer</h2>
+    </footer>
+    <h1>end of body</h1>
+  </body>
+</html>

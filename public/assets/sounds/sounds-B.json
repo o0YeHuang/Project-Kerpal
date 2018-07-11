@@ -1,0 +1,74 @@
+[
+  {
+    "imgSrc": "assets/imgs/cartman1.jpg",
+    "soundSrc": "assets/sounds/cartman1.mp3",
+    "imgAlt": "Cartman",
+    "title": "Cartman - Holy crap"
+  },
+  {
+    "imgSrc": "assets/imgs/cartman2.jpg",
+    "soundSrc": "assets/sounds/cartman2.mp3",
+    "imgAlt": "Cartman",
+    "title": "Cartman - In or out?"
+  },
+  {
+    "imgSrc": "assets/imgs/cartman3.jpeg",
+    "soundSrc": "assets/sounds/cartman3.mp3",
+    "imgAlt": "Cartman",
+    "title": "Cartman - Pretty cool"
+  },
+  {
+    "imgSrc": "assets/imgs/kyle1.jpg",
+    "soundSrc": "assets/sounds/kyle1.mp3",
+    "imgAlt": "Kyle",
+    "title": "Kyle - Aww dude"
+  },
+  {
+    "imgSrc": "assets/imgs/kyle2.jpg",
+    "soundSrc": "assets/sounds/kyle2.mp3",
+    "imgAlt": "Kyle",
+    "title": "Kyle - There's no sand..."
+  },
+  {
+    "imgSrc": "assets/imgs/kyle3.png",
+    "soundSrc": "assets/sounds/kyle3.mp3",
+    "imgAlt": "Kyle",
+    "title": "Kyle - This is nuts!"
+  },
+  {
+    "imgSrc": "assets/imgs/garrison1.jpeg",
+    "soundSrc": "assets/sounds/garrison1.mp3",
+    "imgAlt": "Mrs. Garrison",
+    "title": "Mrs. Garrison - Butt for brains"
+  },
+  {
+    "imgSrc": "assets/imgs/garrison2.jpg",
+    "soundSrc": "assets/sounds/garrison2.mp3",
+    "imgAlt": "Mrs. Garrison",
+    "title": "Mrs. Garrison - Donkey Punch"
+  },
+  {
+    "imgSrc": "assets/imgs/garrison3.jpg",
+    "soundSrc": "assets/sounds/garrison3.mp3",
+    "imgAlt": "Mrs. Garrison",
+    "title": "Mrs. Garrison - Stupid people"
+  },
+  {
+    "imgSrc": "assets/imgs/randy1.png",
+    "soundSrc": "assets/sounds/randy1.mp3",
+    "imgAlt": "Randy Marsh",
+    "title": "Randy - Little bit of..."
+  },
+  {
+    "imgSrc": "assets/imgs/randy2.jpg",
+    "soundSrc": "assets/sounds/randy2.mp3",
+    "imgAlt": "Randy Marsh",
+    "title": "Randy - What do you wanna do"
+  },
+  {
+    "imgSrc": "assets/imgs/randy3.jpg",
+    "soundSrc": "assets/sounds/randy3.mp3",
+    "imgAlt": "Randy Marsh",
+    "title": "Randy - You got nothing on us"
+  }
+]

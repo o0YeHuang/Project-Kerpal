@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--
+Validation Errors:
+
+Validator Output: Document checking completed. No errors or warnings to show.
+
+The structural version passes validation since we are adhereing to HTML5 standards now. Compared to
+the presentational version, this version removes the deprecated attributes that were used to "style"
+the page using only HTML.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#11FFBD"/>
+    <title>Kerpal Soundboard</title>
+    <link rel="manifest" href="manifest.json">
+    <link id="themeStyle" rel="stylesheet" type=text/css href="assets/css/style_final.min.css" media="screen">
+  </head>
+  <body>
+    <template id="soundTemplateIcon">
+      <div class="sound">
+        <div class="soundImg">
+          <img src="" alt=""/>
+          <div class="soundButton">
+            <button class="playPauseBtn" type="button">
+              <img class="playpauseButtonImg" src="assets/imgs/play-button.svg" alt="Play/Pause"/>
+              <audio src=""></audio>
+            </button>
+          </div>
+        </div>
+        <h3></h3>
+      </div>
+    </template>
+    <template id="soundTemplateList">
+      <div class="sound-list">
+        <div class="soundImg-list">
+          <img class="list-img" src="" alt=""/>
+          <div class="soundButton">
+            <button class="playPauseBtn" type="button">
+              <img class="playpauseButtonImg" src="assets/imgs/play-button.svg" alt="Play/Pause"/>
+              <audio src=""></audio>
+            </button>
+          </div>
+        </div>
+        <div>
+          <h3></h3>
+        </div>
+      </div>
+    </template>
+    <template id="optionTemplate">
+      <option label="" value="">Choose</option>
+    </template>
+    <header>
+      <div class="coolSoundEq">
+        <div class="rec1"></div>
+        <div class="rec2"></div>
+        <div class="rec3"></div>
+        <div class="rec4"></div>
+        <div class="rec5"></div>
+      </div>
+      <h1 id="headerTitle">KERPAL</h1>
+      <div>
+        <div class="menus">
+          <div id="themeMenu">
+            <select id="themes" name="themes">
+
+            </select>
+          </div>
+          <div id="soundMenu">
+            <select id="boards" name="soundboards">
+
+            </select>
+          </div>
+          <div class="viewMenu">
+            <div class="togSwitch">
+                <div id="togBtn">
+                  <div class="togSlider">
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="menuTitles">
+          <div>
+            <h3>Themes</h3>
+          </div>
+          <div>
+            <h3>Soundboards</h3>
+          </div>
+          <div>
+            <h3 id="viewText">Icon View</h3>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <noscript>
+        <h2>Javascript is not supported on this browser!</h2>
+      </noscript>
+      <div id="soundboard-one-icon" class="soundboard"></div>
+      <div id="soundboard-one-list" class="hideBoard"></div>
+      <div id="soundboard-two-icon" class="hideBoard"></div>
+      <div id="soundboard-two-list" class="hideBoard"></div>
+    </main>
+    <footer>
+      <div class="legal">
+        <h3>&copy; Copyright 2017. Team Kerpal - CSE134B Summer 2017 - UCSD</h3>
+      </div>
+    </footer>
+    <div id="toastbar"></div>
+    <script type="text/javascript" src="app.js"></script>
+    <script async type="text/javascript" src="assets/js/index_final.js"></script>
+    <script async src="assets/js/snackbar.min.js"></script>
+    <script src="assets/js/raven.min.js"></script>
+    <script>Raven.config('https://7d61119031f64d2aaa0f6a50900bb777@sentry.io/196813').install();</script>
+  </body>
+</html>

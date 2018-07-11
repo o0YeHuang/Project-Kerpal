@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Kerpal Final Report</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Lato');
+      * {box-sizing: border-box; font-family: 'Lato', sans-serif;}
+      html, body {width: 100%; height: 100%; padding: 0;}
+      body {display: flex; flex-direction: column; padding: 0 2em;}
+      h1 {text-align: center;}
+      table, td, th {border: 1px solid #ddd; text-align: left;}
+      table {border-collapse: collapse;}
+      .fileSizes {width: 50%}
+      .loadSpeeds {width: 75%}
+      th, td {padding: 15px;}
+      p, h3 {padding: 0 2em;}
+      p {width: 70%;}
+    </style>
+  </head>
+  <body>
+    <h1>Team Kerpal - Final Report</h1>
+    <br />
+    <h2>Overall Dev Experiences</h2>
+    <h3>HW1</h3>
+    <p>
+        Working on HW1 was very interesting. All of us were definitely taking CSS for granted, and the level of ease it provides in styling web pages.
+        So when we had to make our soundboard using just presentational HTML, it was difficult and challenging. However by doing this, along with
+        developing the HTML tag test page, it really helped us understand HTML much better, such as block vs. inline elements, and element attributes
+        such as "srcset" which none of us knew had existed.
+    </p>
+    <h3>HW2</h3>
+    <p>
+        HW2 is where the first real version of our soundboard came to life (in the vanilla version). All three of already has some preconceived notions
+        about Twitter Bootstrap, some good, some bad, but mostly bad. By using Bootstrap, we were quickly reminded how inefficent Bootstrap is, and in our
+        opinion not that time-saving at all, especially when you have some basic CSS understanding. Going from that image of what a web page looks like
+        in your head to actual HTML/CSS code, is much easier with vanilla css in our opinion. Bootstrap to us is the enemy of creativity; we don't need any
+        more cookie-cutter designs.
+    </p>
+    <h3>HW3</h3>
+    <p>
+        HW3 was very techincal, which we all love as CS/CE students. Using vanilla.js and Vue.js, we were able to create and make use of "custom" HTML
+        components in different ways. In our vanilla.js version we made use of the template tag to template our "sound" container, which was dynamically
+        added to a soundboard container on the DOM via Javascript after fetching/parsing  sounds from a JSON file. With Vue.js we also made use of template tags, but in a different
+        manner. Instead of adding these "sounds" to a soundboard container dynamically with Javascript, we made use of special Vue.js methods/attributes such as v-for, and prop binding
+        (assign props to these sound elements).
+    </p>
+    <h3>HW4</h3>
+    <p>
+        HW4 awarded us the opportunity to polish our vanilla.js version of the Kerpal soundboar from HW3, as well as make it a progressive web application by using service-workers. In terms of polishing
+        we fixed a lot of aesthetic errors that we were having at various screen sizes, made all of our Javascript code ES5/6 compliant (with minor tweaks to some eslint rules), refactored Javascript functions
+        that were messy or violating SRP or DRY principles. We also used Gulp to create tasks to help minify our CSS and optimize images so that we can reduce file sizes and therefore page load time. By making our
+        soundboard a PWA, we quickly saw the advantages of "offline first" thinking, especially in performance with respect bandwidth usage and page load time. By caching major assets, our soundboard became much faster
+        to load on mobile devices and on a PC we got very close to the holy grail of RAIL times.
+    </p>
+    <br />
+    <h2>Performance throughout the HW's</h2>
+    <table class="loadSpeeds">
+      <tr>
+        <th>Test Name</th>
+        <th># of Requests</th>
+        <th>Transfer Size</th>
+        <th>Run 1 (ms)</th>
+        <th>Run 2 (ms)</th>
+        <th>Run 3 (ms)</th>
+        <th>Average (ms)</th>
+      </tr>
+      <tr>
+        <td>Bootstrap - PC Un-throttled</td>
+        <td>15</td>
+        <td>125 kb</td>
+        <td>283</td>
+        <td>386</td>
+        <td>269</td>
+        <td>312.7</td>
+      </tr>
+      <tr>
+        <td>Vanilla - PC Un-throttled</td>
+        <td>13</td>
+        <td>86.4 kb</td>
+        <td>169</td>
+        <td>164</td>
+        <td>160</td>
+        <td>164.3</td>
+      </tr>
+      <tr>
+        <td>Bootstrap - Android 3G Throttled (Regular 3G)</td>
+        <td>15</td>
+        <td>125 kb</td>
+        <td>3860</td>
+        <td>3400</td>
+        <td>1920</td>
+        <td>3060</td>
+      </tr>
+      <tr>
+        <td>Vanilla - Android 3G Throttled (Regular 3G)</td>
+        <td>14</td>
+        <td>99.9 kb</td>
+        <td>1630</td>
+        <td>1580</td>
+        <td>1560</td>
+        <td>1590</td>
+      </tr>
+      <tr>
+        <td>Vanilla JS - PC Unthrottled</td>
+        <td>69</td>
+        <td>2.6 MB</td>
+        <td>183</td>
+        <td>206</td>
+        <td>207</td>
+        <td>198.7</td>
+      </tr>
+      <tr>
+        <td>Vue.js - PC Unthrottled</td>
+        <td>70</td>
+        <td>2.6 MB</td>
+        <td>568</td>
+        <td>602</td>
+        <td>567</td>
+        <td>579</td>
+      </tr>
+      <tr>
+        <td>Vanilla JS - Android 3G Throttled (Regular 3G)</td>
+        <td>82</td>
+        <td>4.5 MB</td>
+        <td>1160</td>
+        <td>1350</td>
+        <td>1420</td>
+        <td>1310</td>
+      </tr>
+      <tr>
+        <td>Vue.js - Android 3G Throttled (Regular 3G)</td>
+        <td>69</td>
+        <td>3.8 MB</td>
+        <td>1390</td>
+        <td>1590</td>
+        <td>1490</td>
+        <td>1490</td>
+      </tr>
+      <tr>
+        <td>vanilla.js - Android Offline PWA</td>
+        <td>0</td>
+        <td>0</td>
+        <td>463</td>
+        <td>470</td>
+        <td>471</td>
+        <td>468</td>
+      </tr>
+      <tr>
+        <td>vanilla.js - PC Offline PWA</td>
+        <td>0</td>
+        <td>0</td>
+        <td>125</td>
+        <td>126</td>
+        <td>125</td>
+        <td>125</td>
+      </tr>
+    </table>
+    <h5>*Note: "Regular 3G" corresponds to 100ms latency with 750 kb/s download and 250 kb/s upload.</h5>
+    <br />
+    <p>
+        Quickly glancing through this table, we can observe how our soundboard has gotten better, solely looking at those performance metrics. The clear loser by far is our
+        Twitter Bootstrap version. In HW3 we also see an improvement of page load time by incorporating the use of javascript to dynamically set/get images and sounds instead of
+        hardcoding the source URL's into img and audio tags. Finally, our PWA version in offline mode is simply the best. We now firmly believe that an "offline-first" approach is
+        extremely underrated. Users can leverage offline PWA's more than they think. When a user has a speedy/stable connection such as WiFi, then a PWA can refresh/rebuild it's cache
+        at this time.
+    </p>
+    <br />
+    <h2>Potential Areas of Improvement (if only we had more than 5 weeks)</h2>
+    <ul>
+      <li>Sprite all the images together into one image - this would greatly reduce the number of image requests</li>
+      <li>Concatenate all the mp3's together into a single webm file - this would greatly reduce the number of sound requests</li>
+      <li>Add user login & registration</li>
+      <li>Ability to create your own soundboard</li>
+    </ul>
+    <br />
+    <h2>Screenshots</h2>
+    <a href="assets/imgs/Kerpal-HTML-Validation.png">Kerpal HTML Validation</a>
+    <a href="assets/imgs/Kerpal-CSS-Validation.png">Kerpal CSS Validation</a>
+    <a href="assets/imgs/Kerpal-LightHouse-PWA.png">Kerpal LighHouse PWA Test</a>
+    <a href="assets/imgs/Kerpal-LightHouse-Performance.png">Kerpal LightHouse Performance Test</a>
+    <a href="assets/imgs/Kerpal-LightHouse-Accessibility.png">Kerpal LightHouse Accessibility Test</a>
+    <a href="assets/imgs/Kerpal-LightHouse-BestPractices.png">Kerpal LightHouse Best Practices Test</a>
+    <a href="assets/imgs/Kerpal-PWA-Offline-Snackbar.png">Kerpal Offline Message</a>
+    <a href="assets/imgs/Kerpal-PWA-Offline.png">Kerpal Offline Test</a>
+    <a href="assets/imgs/Kerpal-PWA-Online-Snackbar.png">Kerpal Online Message</a>
+    <a href="assets/imgs/Kerpal-PWA-Fetch.png">Kerpal Service Worker Fetch</a>
+    <a href="assets/imgs/SentryJS-ErrorTracking.png">Screenshot of Sentry.js Error Tracking (Dashboard)</a>
+    <a href="assets/imgs/Sentry-Issue-Detail1.png">Screenshot of Sentry.js Issue Detail - 1</a>
+    <a href="assets/imgs/Sentry-Issue-Detail2.png">Screenshot of Sentry.js Issue Detail - 2</a>
+  </body>
+</html>

@@ -1,0 +1,294 @@
+/*
+Passes CSS Validation, ignoring the warnings that the vendor prefixes for keyframes
+(@-moz-keyframes and @-webkit-keyframes) are not implemented.
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@font-face {
+  font-family: Simplifica;
+  src:  url('../fonts/Simplifica.eot'), url('../fonts/Simplifica.woff') format('woff'), url('../fonts/Simplifica.tff') format('truetype');
+}
+* {box-sizing: border-box;}
+html, body {width: 100%; height: 100%; margin: 0; padding: 0;}
+body {
+  display: flex;
+  flex-direction: column;
+  background: #AAFFA9;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #11FFBD, #AAFFA9) fixed;  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #11FFBD, #AAFFA9) fixed; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+body > * {flex: 1;}
+h2, h3 {font-family: "Lato", sans-serif; margin: 0}
+header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 8em;
+  z-index: 99;
+  background: #AAFFA9;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #11FFBD, #AAFFA9) fixed;  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #11FFBD, #AAFFA9) fixed; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-box-shadow: 0 0.1em 0.5em black;
+  -moz-box-shadow: 0 0.1em 0.5em black;
+  box-shadow: 0 0.1em 0.5em black;
+}
+.coolSoundEq {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: relative;
+	height: 100%;
+	width: 40%;
+  margin-bottom: 2.5em;
+  padding-right: 2em;
+}
+.coolSoundEq > div {
+	display: inline-block;
+	background: black;
+	height: 1em;
+	width: 2em;
+  margin: 0 0.1em;
+	-webkit-animation: load 3s ease-in-out infinite;
+	animation: load 3s ease-in-out infinite;
+}
+.coolSoundEq .rec1 {-webkit-animation-delay: 0.6s; animation-delay: 0.6s;}
+.coolSoundEq .rec2 {-webkit-animation-delay: 0.1s; animation-delay: 0.1s;}
+.coolSoundEq .rec3 {-webkit-animation-delay: 0.7s; animation-delay: 0.7s;}
+.coolSoundEq .rec4 {-webkit-animation-delay: 0.4s; animation-delay: 0.4s;}
+.coolSoundEq .rec5 {-webkit-animation-delay: 1s; animation-delay: 1s;}
+@-moz-keyframes load {
+  0%, 100% {-moz-transform-origin: 500% 100%;}
+	16.67% {-moz-transform: scaleY(5);}
+	33.33% {-moz-transform: scaleY(3);}
+	50% {-moz-transform: scaleY(5);}
+	66.67% {-moz-transform: scaleY(1);}
+	83.34% {-moz-transform: scaleY(4);}
+}
+@-webkit-keyframes load {
+  0%, 100% {-webkit-transform-origin: 500% 100%;}
+  16.67% {-webkit-transform: scaleY(5);}
+  33.33% {-webkit-transform: scaleY(3);}
+  50% {-webkit-transform: scaleY(5);}
+  66.67% {-webkit-transform: scaleY(1);}
+  83.34% {-webkit-transform: scaleY(4);}
+}
+@keyframes load {
+	0%, 100% {transform-origin: 500% 100%;}
+	16.67% {transform: scaleY(5);}
+	33.33% {transform: scaleY(3);}
+	50% {transform: scaleY(5);}
+	66.67% {transform: scaleY(1);}
+	83.34% {transform: scaleY(4);}
+}
+#headerTitle, .legal > h3 {
+  font-family: 'Simplifica', sans-serif;
+  color: black;
+  letter-spacing: 0.1em;
+}
+#headerTitle {
+  width: 20%;
+  font-size: 2em;
+  text-align: center;
+}
+header > div:last-of-type {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 100%;
+  padding-right: 2em;
+}
+.menus, .menuTitles {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.menus > div, .menuTitles > div {
+  display: flex;
+  justify-content: center;
+  width: 33%;
+  height: 100%;
+}
+.menus > div{align-items: flex-end;}
+.menuTitles > div {align-items: flex-start; padding-top: 1em;}
+.menuTitles h3 {text-align: center}
+select {
+  font-family: "Lato", sans-serif;
+  font-size: 1.2em;
+  width: 7.5em;
+  margin: 0 0.5em;
+  padding: 0.3em;
+  border: 0.1em solid black;
+  background: #eee url("../imgs/menu-arrow.png") no-repeat scroll 97.5% center;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-align-last:center;
+}
+.togSwitch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7.5em;
+  height: 3.5em;
+  border: 0.1em solid black;
+  border-radius: 3.5em;
+}
+.togSwitch #togBtn {
+  display: flex;
+  width: 7.5em;
+  height: 3.5em;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.togSwitch #togBtn .togSlider {
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 3.5em;
+  height: 3.5em;
+  margin: auto 0;
+  text-align: center;
+  transition: all 0.3s ease-out;
+  background-image: url("../imgs/view-column-48.png");
+  background-position: center;
+}
+.togSwitch #togBtn.active .togSlider {
+  left: 3.5em;
+  right: 0;
+  background-image: url("../imgs/view-list-48.png");
+  background-position: center;
+}
+main {padding-top: 8em;}
+noscript {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+noscript > h2 {text-align: center; vertical-align: middle;}
+.hideBoard {display: none;}
+.soundboard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2em;
+}
+.soundboard-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2em;
+}
+.sound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+.sound-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 1em 0;
+}
+.sound-list > div:last-of-type {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 20%;
+  padding-left: 2em;
+}
+.sound-list h3 {text-align: left;}
+.soundImg, .soundImg-list {position: relative;}
+.soundImg > img {
+  border: 1px solid black;
+  border-radius: 30%;
+  -moz-box-shadow: 3px 3px 5px 0 black;
+  -webkit-box-shadow: 3px 3px 5px 0 black;
+  box-shadow: 3px 3px 5px 0 black;
+}
+.soundImg-list > img {
+  max-height: 50px;
+  width: auto;
+  border: 1px solid black;
+  -moz-box-shadow: 3px 3px 5px 0 black;
+  -webkit-box-shadow: 3px 3px 5px 0 black;
+  box-shadow: 3px 3px 5px 0 black;
+}
+.soundButton {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.playPauseBtn {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: none;
+  outline: 0;
+  padding: 0;
+}
+.playpauseButtonImg {width: 50%; visibility: hidden;}
+.soundButton:hover .playpauseButtonImg {visibility: visible !important;}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 4em;
+}
+.legal > h3 {text-align: center}
+@media only screen and (min-width: 1681px) {
+  .sound {width: 33%;}
+  #headerTitle {font-size: 6em;}
+}
+@media only screen and (min-width: 1201px) and (max-width: 1680px) {
+  .sound {width: 33%;}
+  #headerTitle {font-size: 3.5em;}
+  select {width: 6.5em;}
+  .togSwitch {width: 6em}
+  .togSlider {width: 3em;}
+  .togSwitch #togBtn.active .togSlider {left: 3em;}
+}
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+  .sound {width: 50%;}
+  #headerTitle {font-size: 2.5em;}
+  .coolSoundEq > div {width: 1.5em; height: 0.75em;}
+  .playpauseButtonImg {visibility: visible;}
+  select {width: 6em;}
+  .togSwitch {width: 4.8em}
+  .togSlider {width: 2.4em;}
+  .togSwitch #togBtn.active .togSlider {left: 1.1em;}
+  .menuTitles h3 {font-size: 0.7em;}
+
+}
+@media only screen and (max-width: 799px) {
+  .sound {width: 100%;}
+  #headerTitle {font-size: 2.5em;}
+  .coolSoundEq > div {width: 1.5em; height: 0.75em;}
+  header > div:last-of-type {padding-right: 0.5em;}
+  .playpauseButtonImg {visibility: visible;}
+  select {width: 6em;}
+  .togSwitch {width: 4.8em}
+  .togSlider {width: 2.4em;}
+  .togSwitch #togBtn.active .togSlider {left: 1em;}
+  .menuTitles h3 {font-size: 0.7em;}
+}
